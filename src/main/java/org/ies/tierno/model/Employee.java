@@ -7,19 +7,14 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 @Log4j
 @Data
-public class Employees {
+public class Employee {
     private String nif;
     private String name;
     private String surname;
-    private String workstation;
+    private String role;
 
     public void showInfo() {
-        log.info("NIF" + nif);
-        log.info("Nombre" + name);
-        log.info("Apellidos" + surname);
-        log.info("Puesto" + workstation);
+        log.info(surname + ", " + name + " (" + nif + "): " + role);
 
     }
-
-
 }
