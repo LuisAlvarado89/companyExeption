@@ -47,6 +47,7 @@ public class CompanyApp implements App {
                 }
 
             } else if (opt == 3) {
+                log.info("Introduce el Departamento");
                 String name = scanner.nextLine();
                 try {
                     Department department = company.findDeparment(name);
@@ -55,6 +56,7 @@ public class CompanyApp implements App {
                     log.error("No se ha encontrado el puto departamento");
                 }
             } else if (opt == 4) {
+                log.info("Introduce el NIF del empleado");
                 String name = scanner.nextLine();
                 try {
                     Employee employee = company.findEmployeeByNif(name);

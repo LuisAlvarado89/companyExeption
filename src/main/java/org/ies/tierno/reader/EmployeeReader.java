@@ -7,9 +7,9 @@ import java.util.Random;
 
 @AllArgsConstructor
 public class EmployeeReader implements Reader<Employee> {
-    private final static String[] NAMES = {"Pablo", "Juan", "Lucía", "Paloma", "Erick", "Shayla"};
-    private final static String[] SURNAMES = {"Lopez", "Perez", "Alvarez", "Fernandez", "Velasquez", "Díaz"};
-    private final static String[] ROLES = {"Jefe", "Peón", "Senior", "Programador", "Recruiter"};
+    final static String[] NAMES = {"Pablo", "Juan", "Lucía", "Paloma", "Erick", "Shayla"};
+    final static String[] SURNAMES = {"Lopez", "Perez", "Alvarez", "Fernandez", "Velasquez", "Díaz"};
+    final static String[] ROLES = {"Jefe", "Peón", "Senior", "Programador", "Recruiter"};
     private final Random random;
 
     @Override
