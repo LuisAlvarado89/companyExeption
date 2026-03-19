@@ -55,12 +55,36 @@ public class CompanyTest {
                 res
         );
     }
+
     @Test
     public void findEmployeeByDepartmentNotFoundTest() {
         Company company = createTestCompany();
         Assertions.assertThrows(
                 DepartmentNotFoundException.class,
-                ()-> {
+                () -> {
+                    company.findEmployees("Otro");
+                }
+        );
+    }
+
+    @Test
+    public void getDeparmentEmployeesTest() throws DepartmentNotFoundException {
+        Company company = createTestCompany();
+        var res = company.findEmployees("IT");
+        Assertions.assertEquals(
+                List.of(
+                        new Employee("1X", "Erick", "Velasquez", "Informatico")
+                ),
+                res
+        );
+    }
+
+    @Test
+    public void getDepartmentEmployeesNotFoundTest() {
+        Company company = createTestCompany();
+        Assertions.assertThrows(
+                DepartmentNotFoundException.class,
+                () -> {
                     company.findEmployees("Otro");
                 }
         );
